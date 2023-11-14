@@ -14,7 +14,6 @@ public class contadorInverso {
 		int max = 0;
 		int min = 0;
 		int salto = 0;
-		
 
 		// BUCLES
 
@@ -40,34 +39,37 @@ public class contadorInverso {
 		}
 		System.out.println("");
 		System.out.println("");
-		
-		//BUCLE DE MAXIMOS Y MINIMOS
-		
-		
+
+		// BUCLE DE MAXIMOS Y MINIMOS
+
 		System.out.print("Introduce un número máximo: ");
 		max = teclado.nextInt();
-		
+
 		System.out.print("Introduce un número mínimo: ");
 		min = teclado.nextInt();
-		
-		while (max<min) {
-		
-		System.out.print("Introduce otro número mínimo: ");
-		min = teclado.nextInt();
-			
+
+		while (max < min) {
+
+			System.out.print("Introduce otro número mínimo: ");
+			min = teclado.nextInt();
+
 		}
-		
+
 		System.out.print("Introduce un salto entre números: ");
 		salto = teclado.nextInt();
-	
-		for (int i=max ; i>=min; i-= salto) {
-			System.out.print( i + " ");
+		System.out.println("");
+
+		for (int i = max; i > min; i -= salto) {
 			
+			System.out.print(i + " ");
+			
+			if (i % 10==0) {
+				System.out.println("");
+				
+			}
+
 		}
-			
-		
-		
-		
+
 		teclado.close();
 	}
 
