@@ -51,14 +51,14 @@ public class arrays {
 	System.out.println("Hay un total de " + numImpares + " números pares.");
 
 	// BUCLE DE ORDENACION ASCENDENTE
-
+	int aux;
 	for (int i = 0; i < listaInteger.length; i++) {
 
 		for (int j = 0; j < (listaInteger.length - 1 - i); j++) {
 
 			if (listaInteger[j] < listaInteger[j + 1]) {
 
-				int aux = listaInteger[j];
+				aux = listaInteger[j];
 				listaInteger[j] = listaInteger[j + 1];
 				listaInteger[j + 1] = aux;
 			}
@@ -84,27 +84,20 @@ public class arrays {
 
 	// Imprimir por pantalla los números pares e impares
 
-	System.out.print("El array de números ordenados es:[");
-
-	for (int i = 0; i < listaPares.length; i++) {
-
-		System.out.print(listaPares[i] + ",");
-
-	}
-	System.out.println("]");
-
-	System.out.print("El array de impares ordenados es:[");
-
-	for (int i = 0; i < listaImpares.length; i++) {
-
-		System.out.print(listaImpares[i] + ",");
-
-	}
-	System.out.print("]");
+	imprimeArray(listaPares , "pares");
+	imprimeArray(listaImpares , "impares");
 	
-	} //MAIN FIN
-	static void imprimeArray (int[] array) {
-		System.out.println();
+	
+	} //ACABA HACEDOR
+	static void imprimeArray (int[] array, String tipo) {
+		System.out.print("El array de " + tipo + " ordenados es:[");
+
+		for (int i = 0; i < array.length; i++) {
+
+			System.out.print(array[i] + ",");
+
+		}
+		System.out.println("]");
 		
 	}
 }
