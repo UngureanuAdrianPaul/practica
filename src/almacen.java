@@ -7,6 +7,7 @@ public class almacen {
 
 	// VARIABLE GENERICA: usada FUERA del main para no repetir crear diferentes
 	// arrays en diferentes metodos (ahorro lineas de codigo)
+	//SIEMPRE VAN CON STATIC AL PRINCIPIO
 
 	static final int TOTALNUM = 10; // Las constantes van en MAYUSCULA todas las letras
 
