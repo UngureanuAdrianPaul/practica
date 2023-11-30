@@ -5,7 +5,11 @@ public class almacen {
 
 	// Decalaramos variables genericas
 
-	static final int TOTALNUM = 10;
+	// VARIABLE GENERICA: usada FUERA del main para no repetir crear diferentes
+	// arrays en diferentes metodos (ahorro lineas de codigo)
+
+	static final int TOTALNUM = 10; // Las constantes van en MAYUSCULA todas las letras
+
 	static int[] arrayEnteros = new int[TOTALNUM];
 
 	public static void main(String[] args) {
@@ -98,9 +102,7 @@ public class almacen {
 		System.out.println(" ]");
 	}
 
-
-
 	static void valorDesde(int x) {
-		
+
 	}
 }
