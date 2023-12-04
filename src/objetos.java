@@ -55,7 +55,9 @@ class ListaFijaCadena {
 		return MAXELE;
 	}
 
-	
+	public void introduceString(String[] cadena) {
+		
+	}
 
 	
 }
