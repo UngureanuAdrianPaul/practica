@@ -1,3 +1,4 @@
+package practicas;
 import java.util.Scanner;
 
 public class strings {
@@ -25,7 +26,7 @@ public class strings {
 	}
 
 	static void imprimeBro(int indice, String cadena) {
-		System.out.println("El carácter número " + indice + "de la cadena " + cadena + " es: " + cadena.charAt(indice));
+		System.out.println("El carácter número " + indice + " de la cadena " + cadena + " es: " + cadena.charAt(indice));
 
 	}
 
