@@ -8,6 +8,19 @@ class Clase {
 	private Alumno[] alumnos;
 	private static final int TOTALALUMNOS = 15;
 	private String nombre;
+	private Profesor profesor;
+
+	// CONSTRUCTOR
+
+	public Clase(String nombre) {
+
+		numAlumnos = 0;
+
+		alumnos = new Alumno[TOTALALUMNOS];
+
+		this.nombre = nombre;
+
+	}
 
 	// GETTERS Y SETTERS
 
@@ -39,16 +52,12 @@ class Clase {
 		this.nombre = nombre;
 	}
 
-	// CONSTRUCTOR
+	public Profesor getProfesor() {
+		return profesor;
+	}
 
-	public Clase(String nombre) {
-
-		numAlumnos = 0;
-
-		alumnos = new Alumno[TOTALALUMNOS];
-
-		this.nombre = nombre;
-
+	public void setProfesor(Profesor profesor) {
+		this.profesor = profesor;
 	}
 
 	// METODOS
