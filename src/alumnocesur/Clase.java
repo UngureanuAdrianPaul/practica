@@ -64,7 +64,7 @@ class Clase {
 
 	public String toString() {
 
-		return ("[Clase: " + nombre + ", NumAlumnos: " + numAlumnos + "]");
+		return ("[Clase: " + nombre + " Profesor: "+ profesor +   ", NumAlumnos: " + numAlumnos + "]");
 	}
 
 	public void add(Alumno nuevoAlu) {
@@ -77,13 +77,21 @@ class Clase {
 
 	}
 
-	public void delete(String nombre) {
-
-		for (int i = 0; i < getNumAlumnos(); i++) {
-			if (getAlumnos()[i].getNombre() == nombre) {
-				alumnos[i] = null;
+	public void delete(Alumno alumno) {
+		
+		Alumno [] alumnoProb = new Alumno[TOTALALUMNOS];
+		
+		int numProb =0;
+		
+		for (int i = 0; i < numAlumnos; i++) {
+			if (alumnos[i] != alumno) {
+				alumnoProb[numProb] = alumnos[i];
+				numProb++;
+				
 			}
+			System.out.println("Esto es" + alumnoProb);
 		}
+		
 	}
 
 } // fin CLASE

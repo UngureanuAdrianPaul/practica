@@ -7,9 +7,14 @@ public class AlumnoCesur {
 	// MAIN
 
 	public static void main(String[] args) {
+		
+		Profesor teacher = new Profesor ("Daniel", 47,"DAM");
+		System.out.println(teacher.getNombre());
 
+		
 		Clase premiumPlus = new Clase("Premium Plus");
 
+		premiumPlus.setProfesor(teacher);
 		for (int i = 0; i < 12; i++) {
 			premiumPlus.add(new Alumno(Creator.generadorNombre(), Creator.generadorEdad(), "DAM"));
 		}
