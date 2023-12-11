@@ -3,7 +3,7 @@ package practicas;
 import java.util.Random;
 
 
-public class GeneradorDeObjetos {
+public class Creator {
 
 	// ATRIBUTOS
 
