@@ -17,6 +17,9 @@ public class CentroEstudio {
 		this.nombre = nombre;
 		MAX_CLASES = mAX_CLASES;
 		MAX_ADMIN = mAX_ADMIN;
+		this.administrativos = new Administrativo[MAX_ADMIN];
+		this.clases = new Clase[MAX_CLASES];
+
 	}
 
 	public CentroEstudio(String nombre) {

@@ -32,5 +32,9 @@ class Administrativo extends Persona{
 		this.idiomas = idiomas;
 	}
 	
+	public String toString() {
+		return "[Administrativo: " + super.getNombre() + ", Edad: " + super.getEdad() + "Idiomas: " + idiomas + "]";
+
+	}
 
 }
