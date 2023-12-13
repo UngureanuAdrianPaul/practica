@@ -79,18 +79,6 @@ class Clase {
 
 	public void delete(Alumno alumno) {
 		
-		Alumno [] alumnoProb = new Alumno[TOTALALUMNOS];
-		
-		int numProb =0;
-		
-		for (int i = 0; i < numAlumnos; i++) {
-			if (alumnos[i] != alumno) {
-				alumnoProb[numProb] = alumnos[i];
-				numProb++;
-				
-			}
-			System.out.println("Esto es" + alumnoProb);
-		}
 		
 	}
 
