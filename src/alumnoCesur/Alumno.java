@@ -1,4 +1,4 @@
-package alumnocesur;
+package alumnoCesur;
 
 class Alumno extends Persona{
 

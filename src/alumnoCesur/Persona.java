@@ -1,4 +1,4 @@
-package alumnocesur;
+package alumnoCesur;
 
 public class Persona {
 

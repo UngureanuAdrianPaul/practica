@@ -1,4 +1,4 @@
-package alumnocesur;
+package alumnoCesur;
 
 public class CentroEstudio {
 
@@ -59,6 +59,11 @@ public class CentroEstudio {
 
 	public int getMAX_ADMIN() {
 		return MAX_ADMIN;
+	}
+
+	public String toString() {
+
+		return ("[" + "Centro: " + nombre + ", CAPACIDAD { Clases: " + MAX_CLASES + ", Admin: " + MAX_ADMIN + " }]");
 	}
 
 }

@@ -2,7 +2,6 @@ package practicas;
 
 import java.util.Random;
 
-
 public class Creator {
 
 	// ATRIBUTOS
@@ -13,14 +12,19 @@ public class Creator {
 	private static String[] apellidos = { "Perez", "Ruiz", "Ungureanu", "Diaz", "Fernandez", "Garcia", "Campos",
 			"Rodriguez", "Torres", "Villa" };
 
+	private static String[] asistencia = { "PremiumPlus", "Online", "Presencial" };
+
+	private static String[] tipoCurso = { "DAM", "DAW", "CiberSeguridad", "BigData" };
+
 	public static void main(String[] args) {
 
 		for (int i = 0; i < 10; i++) {
 			System.out.println(generadorNombre());
+			System.out.println(newClase());
+			
 		}
 	}
 
-	
 	// METODOS
 
 	public static String generadorNombre() {
@@ -33,18 +37,24 @@ public class Creator {
 
 		return (nombres[numNombre] + " " + apellidos[numApellido1] + " " + apellidos[numApellido2]);
 
-		
-		}
-	
-	public static int generadorEdad() {
-		
-			Random aleatorio = new Random();
-			
-			return (18 + aleatorio.nextInt(30));
-			
-			
-		}
 	}
-	
 
- // FIN GENERADOR
+	public static int generadorEdad() {
+
+		Random aleatorio = new Random();
+
+		return (18 + aleatorio.nextInt(30));
+
+	}
+
+	public static String newClase() {
+		
+		Random aleatorio = new Random();
+		
+		
+		return ("Tipo de asistencia: "+asistencia[aleatorio.nextInt(asistencia.length)] + ", Tipo de Curso: " + tipoCurso[aleatorio.nextInt(tipoCurso.length)]) ;
+		
+	}
+}
+
+// FIN GENERADOR
