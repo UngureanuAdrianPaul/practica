@@ -1,0 +1,82 @@
+**Puedes crear los metodos privados que veas necesarios**
+
+1. Implementar la clase < Celda > que tendra las siguientes variables privadas:
+boolean bomb
+boolean vis
+int num 
+
+Implementa los siguientes metodos publicos:
+
+setBomb. Parametros: (entero)dif 
+Modificara el valor de bomb. Para ello se utilizara la clase random para que genere un numero aleatorio entre 1 y 100, en el caso de que supere la dificultad bomb sera igual a false, en caso contrario true
+
+setNum.  Parametros: (entero)numero
+asignara el valor numero a num
+
+setVis. Parametros: (boleean)visible
+asignara el valor visible a vis
+
+getBomb Parametros: ninguno
+devuelve bomb
+
+getNum Parametros: ninguno
+devuelve num
+
+getVis Parametros: ninguno
+devuelve vis
+
+Celda Parametros: ninguno
+inicializa bomb a falso
+inicializa vis a falso
+inicializa num a 0
+
+2. Implementar la clase < Tabla > que tendra las siguientes variables privadas
+
+private Celda[][] casilla;
+int fila;
+int columna;
+
+
+Implementa los siguientes metodos publicos:
+
+clear. Parametros: ninguno
+Recorre toda la tabla modificando los atributos de cada Celda de la siguiente forma:
+iguala bomb a falso
+iguala vis a falso
+asigna num a 0
+
+generar. Parametros:(entero)filas, (entero)columnas, (entero)dif
+Recorre toda la tabla aplicando el metodo setBomb a cada Celda
+
+iniNum. Parametros: (entero)posx, (entero)posy
+Calcula el numero que le corresponde a la Celda que hay en la posicion pasada por parametros
+El numero de cada celda dependera del numero de bomb verdaderos que rodee a esa posicion de la tabla
+
+iniTabla. Parametros: ninguno
+Recorre la tabla aplicando modificando cada num de cada Celda por el numero que le corresponda
+
+
+evaluar. Parametros:(entero)posx, (entero)posy
+Devuelve el valor de bomb en (posx,posy)
+y modifica el atributo vis de la celda a true
+
+visibilizar. Parametros: ninguno
+Recorre toda la tabla modificando el atributo vis de celda asignandole true
+
+mostrar. Parametros: ninguno
+Muestra por pantalla la tabla. En caso de que el atributo vis de Celda sea true mostrara num en caso contrario mostrara X
+
+actualizar. Parametros: ninguno
+Recorre toda la tabla actualizando vis de cada Celda
+Lo modificara a true en el caso de que haya una Celda adyacente con el atributo num igual a 0
+
+Tabla Parametros: (entrada)numFilas, (entrada)numColumnas
+Creara una tabla con el numero de filas y columnas introducido por parametros
+
+3.Crea un main que utilizando las clases creadas anteriormente haga lo siguiente:
+	3.1 Pida al usuario por teclado de que tamaño quiere el tablero de juego
+	3.2 Pida al usuario que dificultad quiere (Si elije facil la dificultad valdra 40, en normal valdra 60, en dificil valdra 70)
+	3.3 Hasta que el jugador introduzca las coordenadas en las que haya una bomba que haga lo siguiente:
+	Muestre por pantalla tabla con las coordenadas que haya evaluado y que no correctamente
+	Pida al usuario por teclado la siguiente coordenada que quiera evaluar
+	
