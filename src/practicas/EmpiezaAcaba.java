@@ -15,28 +15,25 @@ public class EmpiezaAcaba {
 
 		num1 = teclado.nextInt();
 		num2 = teclado.nextInt();
-		
+
 		System.out.println("El número 1 empieza en: " + primera(num1));
-		
+
 		System.out.println("El número 1 termina en: " + ultima(num1));
-		
+
 		System.out.println("El número 1 tiene: " + total(num1) + " cifra/s");
-		
+
 		System.out.println("El número 2 empieza en: " + primera(num2));
-		
+
 		System.out.println("El número 2 termina en: " + ultima(num2));
-		
+
 		System.out.println("El número 2 tiene: " + total(num2) + " cifra/s");
-			
-		
-		if ((primera(num1)==primera(num2)) && (ultima(num1)==ultima(num2))) {
-			
+
+		if ((primera(num1) == primera(num2)) && (ultima(num1) == ultima(num2))) {
+
 			System.out.println("Los números empiezan y acaban por los mismos números");
-		}
-		else {
+		} else {
 			System.out.println("NO acaban por los mismos números");
 		}
-				
 
 		teclado.close();
 	}
@@ -55,7 +52,7 @@ public class EmpiezaAcaba {
 
 		return (num % 10);
 
-	}
+	} 
 
 	// METODO PARA LA PRIMERA CIFRA
 
