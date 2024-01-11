@@ -6,13 +6,14 @@ public class Insecto extends Animal {
 
 	private boolean alas;
 	private boolean antenas;
-	private Enemigo enemigo;
+	private Enemigo [] enemigos;
+
 
 	// CONSTRUCTOR
 
-	public Insecto(int tpVida, String nombre, boolean alas, boolean antenas, String enemigo) {
+	public Insecto(int tpVida, String nombre, boolean alas, boolean antenas) {
 		super(tpVida, nombre);
-		this.enemigo = new Enemigo(enemigo);
+		this.enemigos = new Enemigo [5];
 		this.alas = alas;
 		this.antenas = antenas;
 	}
@@ -35,12 +36,13 @@ public class Insecto extends Animal {
 		this.antenas = antenas;
 	}
 
-	public Enemigo getEnemigo() {
-		return enemigo;
+	public Enemigo [] getEnemigos() {
+		return enemigos;
 	}
 
-	public void setEnemigo(Enemigo enemigo) {
-		this.enemigo = enemigo;
+	public void setEnemigo(String enemigo) {
+		enemigos [0] = new Enemigo(enemigo);
+		
 	}
 
 	class Enemigo {
