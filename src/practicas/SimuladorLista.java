@@ -8,10 +8,10 @@ public class SimuladorLista {
 		for (int i = 0; i < 100; i++) {
 
 			array1.insertarValor(i);
-			
+
 			System.out.println(array1.getIntMiArray(i));
 		}
-		
+
 		System.out.println("NumElems: " + array1.getNumElem());
 
 	}
@@ -30,7 +30,7 @@ class MiArray {
 		numElem = 0;
 		miArray = new int[longitud];
 		for (int i = 0; i < longitud; i++) {
-			miArray[i] = 0;
+			miArray[i] = -1;
 
 		}
 
@@ -40,7 +40,7 @@ class MiArray {
 		numElem = 0;
 		miArray = new int[LONGITUD];
 		for (int i = 0; i < LONGITUD; i++) {
-			miArray[i] = 0;
+			miArray[i] = -1;
 
 		}
 
@@ -74,7 +74,7 @@ class MiArray {
 	public void resetear() {
 
 		for (int i = 0; i < LONGITUD; i++) {
-			miArray[i] = 0;
+			miArray[i] = -1;
 
 		}
 	}
@@ -88,6 +88,38 @@ class MiArray {
 			numElem++;
 		}
 
+	}
+
+	public int sacarValorUltimo() {
+
+		if (numElem == 0) {
+			return -1;
+		} else {
+			int temp = miArray[numElem - 1];
+			numElem--;
+			miArray[numElem] = -1;
+			return temp;
+
+		}
+	}
+
+	public int sacarValorPrimero() {
+
+		if (numElem == 0) {
+			return -1;
+		} else {
+
+			int temp = miArray[0];
+
+			for (int i = 0; i < numElem - 1; i++)
+				if (i < numElem - 1) {
+					miArray[i] = miArray[i + 1];
+				}
+			miArray[numElem - 1] = -1;
+			numElem--;
+
+			return temp; 
+		}
 	}
 
 }
