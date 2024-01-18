@@ -1,18 +1,125 @@
 package practicas;
 
+import java.util.Random;
+
 public class SimuladorLista {
 
 	public static void main(String[] args) {
 
-		MiArray array1 = new MiArray(100);
+		Random aleatorio = new Random();
+
+		MiArray original = new MiArray(100);
+
+		// INSERTAR 100 NUMEROS
+
 		for (int i = 0; i < 100; i++) {
 
-			array1.insertarValor(i);
+			original.insertarValor(aleatorio.nextInt(100));
 
-			System.out.println(array1.getIntMiArray(i));
+			System.out.print(original.getIntMiArray(i) + " ");
+
 		}
 
-		System.out.println("NumElems: " + array1.getNumElem());
+		// SACAR LOS 10 PRIMEROS
+		System.out.println();
+		System.out.println();
+		System.out.println("Los 10 primeros numeros son: ");
+
+		for (int i = 0; i < 10; i++) {
+
+			System.out.print(original.getIntMiArray(i) + " ");
+
+		}
+
+		// NUMEROS PARES
+		System.out.println();
+		System.out.println();
+		System.out.println("Los números pares son: ");
+		int numPares = 0;
+		for (int i = 0; i < 100; i++) {
+
+			if (original.getIntMiArray(i) % 2 == 0) {
+				numPares++;
+				System.out.print(original.getIntMiArray(i) + " ");
+			}
+
+		}
+		System.out.println();
+		System.out.println("Hay un total de " + numPares + " numeros Pares.");
+
+		// NUMEROS IMPARES
+
+		System.out.println();
+		System.out.println("Los números impares son: ");
+		int numImpares = 0;
+
+		for (int i = 0; i < 100; i++) {
+
+			if (original.getIntMiArray(i) % 2 != 0) {
+				numImpares++;
+				System.out.print(original.getIntMiArray(i) + " ");
+			}
+
+		}
+		System.out.println();
+		System.out.println("Hay un total de " + numImpares + " numeros Impares.");
+
+		// DIVIDIMOS EN PARES E IMPARES
+
+		// ARRAY DE PARES
+		System.out.println();
+		MiArray arrayPares = new MiArray(numPares);
+
+		for (int i = 0; i < original.getNumElem(); i++) {
+
+			if (original.getIntMiArray(i) % 2 == 0) {
+
+				arrayPares.insertarValor(original.getIntMiArray(i));
+
+			}
+		}
+		System.out.println("El array de pares es: ");
+		for (int i = 0; i < numPares; i++) {
+
+			System.out.print(arrayPares.getIntMiArray(i) + " ");
+		}
+
+		// ARRAY DE IMPARES
+		System.out.println();
+		System.out.println();
+		MiArray arrayImpares = new MiArray(numImpares);
+
+		for (int i = 0; i < original.getNumElem(); i++) {
+
+			if (original.getIntMiArray(i) % 2 != 0) {
+
+				arrayImpares.insertarValor(original.getIntMiArray(i));
+
+			}
+		}
+		System.out.println("El array de impares es: ");
+		for (int i = 0; i < numImpares; i++) {
+
+			System.out.print(arrayImpares.getIntMiArray(i) + " ");
+		}
+
+		// ARRAY ORIGINAL RESETADO
+		System.out.println();
+		System.out.println();
+		System.out.println("Array Original reseteado: ");
+
+		for (int i = 0; i < original.getNumElem(); i++) {
+
+			original.resetear();
+			System.out.print(original.getIntMiArray(i) + " ");
+		}
+
+		// ARRAY ORIGINAL RELLENO
+
+		for (int i = 0; i < original.getNumElem(); i++) {
+
+			original
+		}
 
 	}
 
@@ -20,9 +127,9 @@ public class SimuladorLista {
 
 class MiArray {
 	// ATRIBUTOS
-	public int[] miArray;
-	public int numElem;
-	public static final int LONGITUD = 10;
+	private int[] miArray;
+	private int numElem;
+	private static final int LONGITUD = 10;
 
 	// CONSTRUCTOR
 
@@ -73,7 +180,7 @@ class MiArray {
 
 	public void resetear() {
 
-		for (int i = 0; i < LONGITUD; i++) {
+		for (int i = 0; i < numElem; i++) {
 			miArray[i] = -1;
 
 		}
@@ -118,7 +225,7 @@ class MiArray {
 			miArray[numElem - 1] = -1;
 			numElem--;
 
-			return temp; 
+			return temp;
 		}
 	}
 
