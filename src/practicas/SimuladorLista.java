@@ -118,7 +118,7 @@ public class SimuladorLista {
 
 		for (int i = 0; i < original.getNumElem(); i++) {
 
-			original
+			
 		}
 
 	}
