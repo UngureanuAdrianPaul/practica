@@ -117,7 +117,7 @@ public class SimuladorLista {
 		// ARRAY ORIGINAL RELLENO
 
 		for (int i = 0; i < original.getNumElem(); i++) {
-
+			
 			
 		}
 
