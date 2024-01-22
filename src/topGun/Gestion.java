@@ -5,7 +5,12 @@ import java.util.Scanner;
 public class Gestion {
 
 	public static void main(String[] args) {
+		
+		escuelaAviacion();
 
+	}
+	
+	static void escuelaAviacion() {
 		// OBJETOS
 		Scanner teclado = new Scanner(System.in);
 
@@ -134,5 +139,4 @@ public class Gestion {
 
 		teclado.close();
 	}
-
 }

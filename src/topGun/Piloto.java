@@ -10,8 +10,8 @@ public class Piloto {
 	private String rangoPiloto;
 
 	public void mostrarPiloto() {
-		System.out.println("Identificacion: " + idPiloto + "| Nombre: " + nomPiloto + "| Horas de Vuelo: "
-				+ horasVueloPiloto + "| Rango: " + rangoPiloto);
+		System.out.println("[Identificacion: " + idPiloto + "| Nombre: " + nomPiloto + "| Horas de Vuelo: "
+				+ horasVueloPiloto + "| Rango: " + rangoPiloto + "]");
 	}
 	// CONSTRUCTOR
 
