@@ -8,14 +8,19 @@ public class Avion {
 	private String modAvion;
 	private int capAvion;
 	private Piloto piloto;
+	private static int contador = 0;
+	private int combustible;
 	
 	//CONSTRUCTOR
 	
-	public Avion(int idAvion, String modAvion, int capAvion, Piloto piloto) {
-		this.idAvion = idAvion;
+	public Avion(String modAvion, int capAvion, Piloto piloto) {
+		contador++;
+		this.idAvion = contador;
 		this.modAvion = modAvion;
 		this.capAvion = capAvion;
 		this.piloto = piloto;
+		combustible = 0;
+		
 	}
 
 	public void mostrarAvion() {
@@ -29,8 +34,9 @@ public class Avion {
 		return idAvion;
 	}
 
-	public void setIdAvion(int idAvion) {
-		this.idAvion = idAvion;
+	public int getContador() {
+		return contador;
+		
 	}
 
 	public String getModAvion() {
@@ -57,9 +63,17 @@ public class Avion {
 		this.piloto = piloto;
 	}
 	
+	public int getCombustible() {
+		return combustible;
+	}
 	
+	public void consumirCombustible(int combustible) {
+		this.combustible = this.combustible - combustible;
+	}
 	
-	
+	public void veAlRepsol(int combustible) {
+		this.combustible = this.combustible + combustible;
+	}
 	
 	
 	

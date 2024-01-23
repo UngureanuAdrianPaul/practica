@@ -8,8 +8,8 @@ public class Entrenamiento extends Avion{
 
 	//CONSTRUCTOR
 	
-	public Entrenamiento(int idAvion, String modAvion, int capAvion, Piloto piloto, boolean tieneDobleMando) {
-		super(idAvion, modAvion, capAvion, piloto);
+	public Entrenamiento( String modAvion, int capAvion, Piloto piloto, boolean tieneDobleMando) {
+		super(modAvion, capAvion, piloto);
 		this.tieneDobleMando = tieneDobleMando;
 	}
 
