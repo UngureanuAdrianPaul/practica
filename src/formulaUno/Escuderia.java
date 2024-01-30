@@ -4,27 +4,28 @@ public class Escuderia {
 
 	// ATRIBUTOS
 
-	private final String nombre;
-	private JefeEscuderia jefe;
-	private Ingeniero[] ingenieros;
-	private Mecanico[] mecanicos;
-	private Piloto[] pilotos;
-	private Coche[] coches;
 	private static final int NUMING = 4;
 	private static final int NUMMEC = 6;
 	private static final int NUMPIL = 2;
 	private static final int NUMCOC = 2;
 
+	private final String nombre;
+	private JefeEscuderia jefe;
+	private ArrayIngeniero ingenieros;
+	private ArrayMecanico mecanicos;
+	private ArrayPiloto pilotos;
+	private ArrayCoche coches;
+	
 	// CONSTRUCTOR
 
 	public Escuderia(String nombre) {
 
 		this.nombre = nombre;
 		this.jefe = null;
-		coches = new Coche[NUMCOC];
-		ingenieros = new Ingeniero[NUMING];
-		mecanicos = new Mecanico[NUMMEC];
-		pilotos = new Piloto[NUMPIL];
+		this.coches = new ArrayCoche(NUMCOC);
+		this.ingenieros = new ArrayIngeniero(NUMING);
+		this.mecanicos = new ArrayMecanico(NUMMEC);
+		this.pilotos = new ArrayPiloto(NUMPIL);
 
 	}
 
@@ -42,25 +43,19 @@ public class Escuderia {
 		this.jefe = jefe;
 	}
 
-	public Ingeniero[] getIngenieros() {
+	public ArrayIngeniero getIngenieros() {
 		return ingenieros;
 	}
 
-	public void contrataIngeniero(Ingeniero ingeniero) {
-
-		ingenieros[0] = ingeniero;
-
-	}
-
-	public Mecanico[] getMecanicos() {
+	public ArrayMecanico getMecanicos() {
 		return mecanicos;
 	}
 
-	public Piloto[] getPilotos() {
+	public ArrayPiloto getPilotos() {
 		return pilotos;
 	}
 
-	public Coche[] getCoches() {
+	public ArrayCoche getCoches() {
 		return coches;
 	}
 
