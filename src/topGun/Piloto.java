@@ -4,34 +4,33 @@ public class Piloto {
 
 	// ATRIBUTOS
 
-	private final int idPiloto;
+	private int idPiloto;
 	protected String nomPiloto;
 	private int horasVueloPiloto;
 	private String rangoPiloto;
-	private static int contador = 0;
 
 	public void mostrarPiloto() {
-		System.out.println("[Identificacion: " + idPiloto + "| Nombre: " + nomPiloto + "| Horas de Vuelo: "
-				+ horasVueloPiloto + "| Rango: " + rangoPiloto + "]");
+		System.out.println("Identificacion: " + idPiloto + "| Nombre: " + nomPiloto + "| Horas de Vuelo: "
+				+ horasVueloPiloto + "| Rango: " + rangoPiloto);
 	}
 	// CONSTRUCTOR
 
-	public Piloto(String nomPiloto, int horasVueloPiloto, String rangoPiloto) {
-		contador++;
-		this.idPiloto = contador;
+	public Piloto(int idPiloto, String nomPiloto, int horasVueloPiloto, String rangoPiloto) {
+
+		this.idPiloto = idPiloto;
 		this.nomPiloto = nomPiloto;
 		this.horasVueloPiloto = horasVueloPiloto;
 		this.rangoPiloto = rangoPiloto;
-
 	}
 
 	// GETTERS Y SETTERS
-	public int getContador() {
-		return contador;
-	}
-	
+
 	public int getIdPiloto() {
 		return idPiloto;
+	}
+
+	public void setIdPiloto(int idPiloto) {
+		this.idPiloto = idPiloto;
 	}
 
 	public String getNomPiloto() {
