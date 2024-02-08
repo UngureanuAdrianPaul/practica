@@ -1,3 +1,4 @@
+
 package formulaUno;
 
 class ArrayCoche {
@@ -30,10 +31,6 @@ class ArrayCoche {
 		return numElem;
 	}
 
-	public void setNumElem(int numElem) {
-		this.numElem = numElem;
-	}
-
 	public Coche[] getMiArray() {
 		return miArray;
 	}
@@ -54,7 +51,7 @@ class ArrayCoche {
 
 	}
 
-	public void insertarValor(Coche coches) {
+	public void insertarCoche(Coche coches) {
 		if (numElem == miArray.length) {
 			System.out.println("Array lleno, no se ha insertado elemento");
 		} else {
@@ -63,6 +60,34 @@ class ArrayCoche {
 		}
 	}
 
+	public void destruirCoche(Coche coche) {
+
+		if (numElem > 0) { // hay coches en el garaje
+			boolean noEncontrado = true;
+			int contador = 0;
+			while (noEncontrado && (contador < numElem)) {
+				if (miArray[contador] == coche) {
+					noEncontrado = false;
+				} else {
+					contador++;
+				}
+
+			}
+
+			if (contador == numElem) { // el coche no ha sido encontrado
+				System.out.println("El coche: " + coche.getModelo() + " no se encuentra en el garaje");
+			} else { // hemos encontrado el coche, lo tengo que borrar
+				numElem--;
+				for (int i = contador; i < numElem; i++) {
+					miArray[i] = miArray[i + 1];
+				}
+				miArray[numElem] = null;
+			}
+
+		} else { // garaje vacio
+			System.out.println("Garaje vacío");
+		}
+	}
 }
 
 class ArrayIngeniero {
@@ -91,12 +116,13 @@ class ArrayIngeniero {
 	}
 
 	// metodos
+	
 	public int getNumElem() {
 		return numElem;
 	}
 
-	public void setNumElem(int numElem) {
-		this.numElem = numElem;
+	public static int getLongitudDefault() {
+		return lONGITUD_DEFAULT;
 	}
 
 	public Ingeniero[] getMiArray() {
@@ -125,6 +151,35 @@ class ArrayIngeniero {
 		} else {
 			miArray[numElem] = ingenieros;
 			numElem++;
+		}
+	}
+
+	public void despedirIngeniero(Ingeniero ingeniero) {
+
+		if (numElem > 0) { 
+			boolean noEncontrado = true;
+			int contador = 0;
+			while (noEncontrado && (contador < numElem)) {
+				if (miArray[contador] == ingeniero) {
+					noEncontrado = false;
+				} else {
+					contador++;
+				}
+
+			}
+
+			if (contador == numElem) {
+				System.out.println("El ingeniero: " + ingeniero.getNombre() + " no se encuentra en el staff");
+			} else {
+				numElem--;
+				for (int i = contador; i < numElem; i++) {
+					miArray[i] = miArray[i + 1];
+				}
+				miArray[numElem] = null;
+			}
+
+		} else {
+			System.out.println("Staff vacío");
 		}
 	}
 
@@ -160,10 +215,6 @@ class ArrayMecanico {
 		return numElem;
 	}
 
-	public void setNumElem(int numElem) {
-		this.numElem = numElem;
-	}
-
 	public Mecanico[] getMiArray() {
 		return miArray;
 	}
@@ -190,6 +241,35 @@ class ArrayMecanico {
 		} else {
 			miArray[numElem] = mecanicos;
 			numElem++;
+		}
+	}
+	
+	public void despedirMecanico(Mecanico mecanico) {
+
+		if (numElem > 0) { 
+			boolean noEncontrado = true;
+			int contador = 0;
+			while (noEncontrado && (contador < numElem)) {
+				if (miArray[contador] == mecanico) {
+					noEncontrado = false;
+				} else {
+					contador++;
+				}
+
+			}
+
+			if (contador == numElem) { 
+				System.out.println("El coche: " + mecanico.getNombre() + " no se encuentra en el garaje");
+			} else {
+				numElem--;
+				for (int i = contador; i < numElem; i++) {
+					miArray[i] = miArray[i + 1];
+				}
+				miArray[numElem] = null;
+			}
+
+		} else { 
+			System.out.println("Garaje vacío");
 		}
 	}
 
@@ -225,10 +305,6 @@ class ArrayPiloto {
 		return numElem;
 	}
 
-	public void setNumElem(int numElem) {
-		this.numElem = numElem;
-	}
-
 	public Piloto[] getMiArray() {
 		return miArray;
 	}
@@ -255,6 +331,35 @@ class ArrayPiloto {
 		} else {
 			miArray[numElem] = pilotos;
 			numElem++;
+		}
+	}
+	
+	public void despedirPiloto(Piloto piloto) {
+
+		if (numElem > 0) { 
+			boolean noEncontrado = true;
+			int contador = 0;
+			while (noEncontrado && (contador < numElem)) {
+				if (miArray[contador] == piloto) {
+					noEncontrado = false;
+				} else {
+					contador++;
+				}
+
+			}
+
+			if (contador == numElem) { 
+				System.out.println("El coche: " + piloto.getNombre() + " no se encuentra en el garaje");
+			} else {
+				numElem--;
+				for (int i = contador; i < numElem; i++) {
+					miArray[i] = miArray[i + 1];
+				}
+				miArray[numElem] = null;
+			}
+
+		} else { 
+			System.out.println("Garaje vacío");
 		}
 	}
 

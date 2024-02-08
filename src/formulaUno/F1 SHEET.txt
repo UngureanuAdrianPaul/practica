@@ -9,7 +9,7 @@ Coche2: SF23, chasis2, 1, Ingeniero2,Motor2
 
 RED BULL
 
-Jefe: 50,Chrsitian Horner, 9876,8,9,9
+Jefe: 50,Christian Horner, 9876,8,9,9
 Piloto: 26, DU DU DURÚ MAX VER STA PPEN, 9854,9,9,9,7
 Piloto:34, Checo Perez (Chucho Perez),9821,8,9,6,8
 Coche1: RB19,chasis,2,Ingeniero1,Motor1

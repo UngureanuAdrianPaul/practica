@@ -9,18 +9,18 @@ public class Escuderia {
 	private static final int NUMPIL = 2;
 	private static final int NUMCOC = 2;
 
-	private final String nombre;
+	private final String NOMBRE;
 	private JefeEscuderia jefe;
 	private ArrayIngeniero ingenieros;
 	private ArrayMecanico mecanicos;
 	private ArrayPiloto pilotos;
 	private ArrayCoche coches;
-	
+
 	// CONSTRUCTOR
 
 	public Escuderia(String nombre) {
 
-		this.nombre = nombre;
+		this.NOMBRE = nombre;
 		this.jefe = null;
 		this.coches = new ArrayCoche(NUMCOC);
 		this.ingenieros = new ArrayIngeniero(NUMING);
@@ -32,7 +32,7 @@ public class Escuderia {
 	// GETTERS Y SETTTERS
 
 	public String getNombre() {
-		return nombre;
+		return NOMBRE;
 	}
 
 	public JefeEscuderia getJefe() {

@@ -1,50 +1,32 @@
 package formulaUno;
+import java.util.Random;
 
 public class JefeEscuderia extends Persona {
-	
-	//ATRIBUTOS
-	
-	private int inteligencia;
-	private int liderazgo;
-	private int experiencia;
-	
-	//CONSTRUCTOR
-	
-	public JefeEscuderia(int edad, String nombre, int dni, int inteligencia, int liderazgo, int experiencia) {
+
+	// ATRIBUTOS
+
+	private final int INTELIGENCIA;
+	private final int LIDERAZGO;
+
+
+	// CONSTRUCTOR
+
+	public JefeEscuderia(int edad, String nombre, int dni) {
 		super(edad, nombre, dni);
-		this.inteligencia = inteligencia;
-		this.liderazgo = liderazgo;
-		this.experiencia = experiencia;
-	}
-
-	//GETTERS Y SETTERS
+		Random aleatorio = new Random();
+		this.INTELIGENCIA = aleatorio.nextInt(10);
+		this.LIDERAZGO = aleatorio.nextInt(10);
 	
-	public int getInteligencia() {
-		return inteligencia;
 	}
 
-	public void setInteligencia(int inteligencia) {
-		this.inteligencia = inteligencia;
+	// GETTERS Y SETTERS
+
+	public int getInteligencia() {
+		return INTELIGENCIA;
 	}
 
 	public int getLiderazgo() {
-		return liderazgo;
+		return LIDERAZGO;
 	}
 
-	public void setLiderazgo(int liderazgo) {
-		this.liderazgo = liderazgo;
-	}
-
-	public int getExperiencia() {
-		return experiencia;
-	}
-
-	public void setExperiencia(int experiencia) {
-		this.experiencia = experiencia;
-	}
-	
-	
-
-	
-	
 }
