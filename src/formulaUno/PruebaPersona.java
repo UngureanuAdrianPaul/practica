@@ -72,7 +72,7 @@ public class PruebaPersona {
 			System.out.print(ingenieroB.getIntMiArray(i) + " ");
 		}
 		System.out.println();
-		// Listado del array usando GET MY ARRAY
+		// Listado del array usando GET MY ARRAYs
 
 		for (int i = 0; i < ingenieroB.getMiArray().length; i++) {
 			System.out.print(ingenieroB.getMiArray()[i] + " ");
