@@ -15,13 +15,13 @@ public class EjemploFicheros2 {
 
 		String frase;
 		char[] array;
-		
-		//INPUT
+
+		// INPUT
 		try {
 			entrada = new FileInputStream("pruebaFichero.txt");
 			int asci = entrada.read();
 			while (asci != -1) {
-				System.out.println((char) asci + " ");
+				System.out.print((char) asci + " ");
 				asci = entrada.read();
 
 			}
@@ -39,18 +39,18 @@ public class EjemploFicheros2 {
 			}
 		}
 
-		//OUTPUT 
+		// OUTPUT
 		try {
 			salida = new FileOutputStream("pruebaFichero.txt");
-			
+
 			System.out.println("Introuduce una frase: ");
 			frase = teclado.nextLine();
 			array = new char[frase.length()];
 
 			for (int i = 0; i < frase.length(); i++) {
-				salida.write((int) frase.charAt(i)) ;
+				salida.write((int) frase.charAt(i));
 				array[i] = frase.charAt(i);
-				System.out.print(array[i]);
+			
 			}
 
 		} catch (IOException e) {
