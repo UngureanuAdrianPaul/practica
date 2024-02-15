@@ -51,14 +51,7 @@ class ArrayCoche {
 
 	}
 
-	public void insertarCoche(Coche coches) {
-		if (numElem == miArray.length) {
-			System.out.println("Array lleno, no se ha insertado elemento");
-		} else {
-			miArray[numElem] = coches;
-			numElem++;
-		}
-	}
+	
 
 	public void destruirCoche(Coche coche) {
 
@@ -86,6 +79,11 @@ class ArrayCoche {
 
 		} else { // garaje vacio
 			System.out.println("Garaje vacío");
+		}
+	}
+	public void mostrarCoches() {
+		for (int i=0; i<numElem; i++) {
+			System.out.print(miArray[i].toString()+" ");
 		}
 	}
 }
