@@ -30,27 +30,23 @@ public class EjemploFicheros2 {
 			System.out.println(e.getMessage());
 		} finally {
 			if (entrada != null) {
-				try {
-					entrada.close();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+
+				entrada.close();
+
 			}
 		}
 
 		// OUTPUT
+		System.out.println("Introduce una frase: ");
+		frase = teclado.nextLine();
+		array = new char[frase.length()];
+		for (int i = 0; i < array.length; i++) {
+			array[i] = frase.charAt(i);
+		}
 		try {
 			salida = new FileOutputStream("pruebaFichero.txt");
-
-			System.out.println("Introuduce una frase: ");
-			frase = teclado.nextLine();
-			array = new char[frase.length()];
-
-			for (int i = 0; i < frase.length(); i++) {
-				salida.write((int) frase.charAt(i));
-				array[i] = frase.charAt(i);
-			
+			for (int i = 0; i < array.length; i++) {
+				salida.write((int) array[i]);
 			}
 
 		} catch (IOException e) {
