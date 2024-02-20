@@ -8,7 +8,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
 public class EjemploBuffer {
 
 	public static void main(String[] args) throws IOException {
@@ -19,12 +18,18 @@ public class EjemploBuffer {
 		try {
 			entrada = new BufferedReader(new FileReader("pruebaFichero2.txt"));
 			salida = new BufferedWriter(new FileWriter("copiaFichero.txt"));
-			salida2 = new PrintWriter(new FileWriter("copiaFichero.txt"));
+			salida2 = new PrintWriter(new FileWriter("copiaFichero2.txt"));
+
 			String linea;
-			int numLinea = 3;
+			int numLinea = 4;
 			while (numLinea > 0) {
 				linea = entrada.readLine();
-				salida2.println(linea);
+				if (numLinea % 2 == 0) {
+					salida.write(linea);
+				} else {
+					salida2.println(linea);
+				}
+
 				numLinea--;
 			}
 
@@ -37,7 +42,7 @@ public class EjemploBuffer {
 			}
 			if (salida != null) {
 				salida.close();
-				
+
 			}
 			if (salida2 != null) {
 				salida2.close();
