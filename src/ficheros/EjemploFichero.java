@@ -1,10 +1,10 @@
-package practicas;
+package ficheros;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class EjemploFicheros {
+public class EjemploFichero {
 
 	public static void main(String[] args) throws IOException {
 
