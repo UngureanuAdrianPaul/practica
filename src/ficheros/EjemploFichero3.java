@@ -1,4 +1,4 @@
-package practicas;
+package ficheros;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
