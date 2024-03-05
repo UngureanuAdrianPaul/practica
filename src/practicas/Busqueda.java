@@ -1,45 +1,53 @@
 package practicas;
 
+import java.util.Random;
+
 public class Busqueda {
 
 	public static void main(String[] args) {
-		int[][] matriz1 = new int[3][4];
+
+		Random aleatorio = new Random();
+
+		int[][] matriz1 = new int[2][2];
 		System.out.println(matriz1.length);
 		System.out.println(matriz1[0].length);
 		// rellenamos matriz 1 con 1s
+
 		for (int i = 0; i < matriz1.length; i++) {
 			for (int j = 0; j < matriz1[i].length; j++) {
-				matriz1[i][j] = 1;
+
+				matriz1[i][j] = aleatorio.nextInt(4);
 			}
 		}
-		int[][] matriz2 = new int[4][3];
 
-		// rellenamos matriz 2 con 1s
+		int[][] matriz2 = new int[2][2];
+
+		// rellenamos matriz 2 con numeros
+
 		for (int i = 0; i < matriz2.length; i++) {
 			for (int j = 0; j < matriz2[i].length; j++) {
-				matriz2[i][j] = 1;
+				matriz2[i][j] = aleatorio.nextInt(4);
 			}
 		}
-		int temp = 0;
-		int[][] resultado = new int[3][3];
+
+		int[][] resultado = new int[2][2];
 
 		for (int i = 0; i < resultado.length; i++) {
 			for (int j = 0; j < resultado[i].length; j++) {
 
-				for (int a = 0; a < matriz1.length; a++) {
-					temp = 0;
-					for (int b = 0; b < matriz1[a].length; b++) {
-						temp = temp + matriz1[a][b] * matriz2[b][a];
-						
-					}
-					resultado[a][j]= temp;
-					
-				}
-				// temp tiene almacenado el valor correcto.
-				System.out.print(resultado[i][j]);
-			}
-		}
-		
+				for (int k = 0; k < 2; k++) {
+					resultado[i][j] = resultado[i][j] + matriz1[i][k] * matriz2[k][j];
 
+				}
+
+				System.out.print(resultado[i][j] + " ");
+
+			}
+			System.out.println();
+
+			// temp tiene almacenado el valor correcto.
+
+		}
 	}
+
 }
